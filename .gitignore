@@ -1,2 +1,5 @@
 *.pyc
 web/node_modules/
+*.pdf
+.env
+*.db

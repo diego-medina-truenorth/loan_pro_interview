@@ -1,0 +1,1 @@
+export APP_SECRET=`openssl rand -hex 32`
