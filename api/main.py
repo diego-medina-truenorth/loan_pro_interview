@@ -7,8 +7,8 @@ from app.database import Base, engine
 
 app = FastAPI()
 
+# Database setup
 Base.metadata.create_all(bind=engine)
-
 
 # Configure CORS
 origins = [
