@@ -7,12 +7,10 @@ from app.database import Base, engine
 
 app = FastAPI()
 
-# Database setup
 Base.metadata.create_all(bind=engine)
 
-# Configure CORS
 origins = [
-    "http://localhost:3000",  # Add your frontend's URL here
+    "http://localhost:3000",
 ]
 
 app.add_middleware(
@@ -23,8 +21,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include the router with endpoints
 app.include_router(endpoints_router)
 
-# Serve the frontend as static files
 app.mount("/", StaticFiles(directory="web/build", html=True))

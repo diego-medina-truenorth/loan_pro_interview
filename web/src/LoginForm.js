@@ -6,7 +6,6 @@ const LoginForm = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform form validation if needed
     onLogin(username, password);
   };
 

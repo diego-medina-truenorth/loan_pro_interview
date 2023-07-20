@@ -13,10 +13,8 @@ const App = () => {
       if (response.ok) {
         // Successful login, perform desired actions
       } else {
-        // Handle login failure
       }
     } catch (error) {
-      // Handle network or server error
     }
   };
 
